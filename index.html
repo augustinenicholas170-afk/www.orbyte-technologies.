@@ -35,7 +35,7 @@
     .nav-inner { max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;height:76px;position:relative; }
     .nav-logo { display:flex;align-items:center;flex-shrink:0; }
     .nav-logo img { height:54px;width:54px;object-fit:cover;border-radius:50%;mix-blend-mode:lighten; }
-    .nav-brand { position:absolute;left:50%;transform:translateX(-50%);font-family:'Orbitron',monospace;font-weight:800;font-size:clamp(1.1rem,2.5vw,1.8rem);background:linear-gradient(135deg,#FDFAF1,#DEBEEF,#C6DECF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:.08em;white-space:nowrap; }
+    .nav-brand { position:absolute;left:50%;transform:translateX(-50%);font-family:'Orbitron',monospace;font-weight:800;font-size:clamp(1.3rem,3vw,2.1rem);background:linear-gradient(135deg,#FDFAF1,#DEBEEF,#C6DECF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:.08em;white-space:nowrap; }
     .desktop-nav { margin-left:auto;display:flex;gap:4px; }
     .nav-link { color:rgba(250,223,210,.8);background:none;border:none;font-family:'Sora',sans-serif;font-size:.9rem;font-weight:500;cursor:pointer;padding:8px 18px;border-radius:20px;transition:all .3s;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;display:inline-block; }
     .nav-link:hover,.nav-link.active { color:var(--mint);background:rgba(198,222,207,.1);box-shadow:0 0 12px rgba(198,222,207,.2); }
@@ -212,7 +212,7 @@
       .burger-btn  { display:flex; }
       .nav-inner   { height:68px;padding:0 16px; }
       .nav-logo img { height:46px;width:46px; }
-      .nav-brand   { font-size:clamp(.8rem,4.2vw,1.1rem); }
+      .nav-brand   { font-size:clamp(1rem,4.5vw,1.3rem); }
       .section     { padding:72px 16px; }
       .hero-slide  { padding:80px 16px; min-height:90vh; }
       .services-grid { grid-template-columns:1fr; }
@@ -233,7 +233,7 @@
       .hero-btns .btn { text-align:center; }
       .about-stats { grid-template-columns:1fr 1fr; }
       .projects-grid { grid-template-columns:1fr; }
-      .nav-brand   { font-size:clamp(.72rem,3.8vw,1rem); }
+      .nav-brand   { font-size:clamp(.9rem,3.8vw,1.1rem); }
       .about-img-badge { bottom:-12px;right:-8px;padding:14px 18px; }
       .about-img-badge .big { font-size:1.6rem; }
     }
@@ -257,18 +257,14 @@
     </div>
     <div class="nav-brand">ORBYTE Technologies</div>
     <div class="desktop-nav">
-      <a href="#About"    class="nav-link">About</a>
       <a href="#Services" class="nav-link">Services</a>
-      <a href="#Projects" class="nav-link">Projects</a>
       <a href="#Contact"  class="nav-link">Contact</a>
     </div>
     <button class="burger-btn" id="burgerBtn" aria-label="Menu">
       <span id="b1"></span><span id="b2"></span><span id="b3"></span>
     </button>
     <div class="mobile-nav" id="mobileNav">
-      <a href="#About"    class="nav-link" onclick="closeMenu()">About</a>
       <a href="#Services" class="nav-link" onclick="closeMenu()">Services</a>
-      <a href="#Projects" class="nav-link" onclick="closeMenu()">Projects</a>
       <a href="#Contact"  class="nav-link" onclick="closeMenu()">Contact</a>
     </div>
   </div>
@@ -350,10 +346,6 @@
     <div class="about-grid">
       <div class="about-img-wrap">
         <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhvkXa1zfBTv9X6Qtq371AJSrv_JIVBn2PVRPNQ5E0VCogjvgg25OeQBsKNub1jzd04b5CPZc1JEpDxESLLXzzvstIArolecO_yxuJhNiNQP04klsK4HA1HTl_T6nw4GjpsyvSEY6yI6UqDCNiz1QMge5RgFNh89rLSu0yD73Go9iwSz696-dMrnO2jpG-y" alt="ORBYTE Technologies"/>
-        <div class="about-img-badge">
-          <span class="big">100%</span>
-          <span class="sm">Client Satisfaction</span>
-        </div>
       </div>
       <div>
         <p class="section-eyebrow">About ORBYTE →</p>
@@ -363,12 +355,6 @@
         <p class="section-lead" style="margin-bottom:20px;">We specialize in delivering high-quality, scalable, and innovative software tailored to meet the evolving needs of modern businesses. Our team combines enthusiasm, continuous learning, and strategic thinking to build solutions that deliver real results.</p>
         <p class="section-lead" style="margin-bottom:32px;">Being a team of passionate freshers, we are highly adaptable, dedicated, and committed to exceeding client expectations through innovation, transparency, and consistent support.</p>
         <a href="#Services" class="btn btn-primary">Discover Our Services</a>
-        <div class="about-stats">
-          <div class="stat-box"><span class="stat-num">100%</span><span class="stat-lbl">Client Satisfaction</span></div>
-          <div class="stat-box"><span class="stat-num">5+</span><span class="stat-lbl">Projects Delivered</span></div>
-          <div class="stat-box"><span class="stat-num">3+</span><span class="stat-lbl">Years Vision</span></div>
-        </div>
-        <div class="about-promise"><span>Fresh ideas meet excellence — at ORBYTE Technologies.</span></div>
       </div>
     </div>
   </div>
@@ -585,7 +571,7 @@
   function closeMenu(){mOpen=false;mNav.classList.remove('open');b1.style.transform='';b2.style.opacity='1';b3.style.transform='';}
 
   /* Active nav */
-  const navSecs=['About','Services','Projects','Contact'];
+  const navSecs=['Services','Contact'];
   window.addEventListener('scroll',()=>{
     const sy=window.scrollY+90;
     navSecs.forEach(id=>{
