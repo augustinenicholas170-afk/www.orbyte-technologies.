@@ -133,14 +133,9 @@
     .projects-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px; }
     .proj-card { background:linear-gradient(135deg,rgba(89,82,156,.18) 0%,rgba(2,39,58,.5) 100%);border:1px solid rgba(222,190,239,.18);border-radius:24px;overflow:hidden;transition:all .4s;backdrop-filter:blur(12px); }
     .proj-card:hover { transform:translateY(-6px);box-shadow:0 32px 64px rgba(89,82,156,.35);border-color:rgba(222,190,239,.45); }
-    .proj-img { position:relative;overflow:hidden; }
-    .proj-img img { width:100%;height:240px;object-fit:cover;display:block;filter:brightness(.88);transition:transform .5s; }
-    .proj-card:hover .proj-img img { transform:scale(1.05); }
-    .proj-img-overlay { position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(2,39,58,.92) 100%); }
-    .proj-tag-wrap { position:absolute;bottom:18px;left:20px; }
-    .proj-tag { font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:.18em;color:var(--mint);text-transform:uppercase;background:rgba(198,222,207,.13);padding:4px 12px;border-radius:20px;border:1px solid rgba(198,222,207,.28); }
-    .proj-body { padding:28px 30px 32px; }
+    .proj-body { padding:36px 30px 36px; }
     .proj-title { font-family:'Orbitron',monospace;font-weight:700;font-size:1.1rem;color:var(--cream);margin-bottom:10px;letter-spacing:.04em; }
+    .proj-tag-inline { display:inline-block;font-family:'Orbitron',monospace;font-size:.6rem;letter-spacing:.18em;color:var(--mint);text-transform:uppercase;background:rgba(198,222,207,.13);padding:4px 12px;border-radius:20px;border:1px solid rgba(198,222,207,.28);margin-bottom:16px; }
     .proj-desc  { font-size:.9rem;line-height:1.7;color:rgba(253,250,241,.65);margin-bottom:22px; }
 
     /* SKILLS */
@@ -155,33 +150,6 @@
     .skills-circle { width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(89,82,156,.5) 0%,rgba(2,39,58,.2) 70%);border:2px solid rgba(198,222,207,.15);box-shadow:0 0 60px rgba(89,82,156,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px; }
     .sc-num { font-family:'Orbitron',monospace;font-size:3rem;font-weight:800;color:var(--lavender); }
     .sc-lbl { font-size:.78rem;color:var(--muted);letter-spacing:.06em;margin-top:4px; }
-
-    /* SPM SECTION */
-    .spm-section { position:relative;z-index:1;padding:110px 32px;background:linear-gradient(135deg,rgba(2,39,58,.5) 0%,rgba(8,6,24,.8) 100%); }
-    .spm-inner { max-width:1280px;margin:0 auto; }
-    .spm-header { text-align:center;margin-bottom:64px; }
-    .spm-badge { display:inline-flex;align-items:center;gap:10px;padding:8px 22px;border-radius:30px;background:rgba(198,222,207,.1);border:1px solid rgba(198,222,207,.3);font-family:'Orbitron',monospace;font-size:.65rem;letter-spacing:.2em;color:var(--mint);text-transform:uppercase;margin-bottom:24px; }
-    .spm-grid { display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start; }
-    .spm-left { }
-    .spm-desc { font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:32px; }
-    .spm-flow { display:flex;flex-direction:column;gap:0; }
-    .spm-step { display:flex;align-items:flex-start;gap:20px;position:relative; }
-    .spm-step:not(:last-child)::after { content:'';position:absolute;left:21px;top:48px;bottom:-16px;width:2px;background:linear-gradient(to bottom,rgba(198,222,207,.3),rgba(89,82,156,.1));z-index:0; }
-    .spm-step-num { width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,rgba(89,82,156,.5),rgba(2,39,58,.8));border:1px solid rgba(198,222,207,.25);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',monospace;font-weight:800;font-size:.85rem;color:var(--lavender);flex-shrink:0;position:relative;z-index:1;animation:pulse 2.5s ease-in-out infinite; }
-    .spm-step-body { padding-bottom:28px; }
-    .spm-step-title { font-family:'Orbitron',monospace;font-weight:700;font-size:.88rem;color:var(--cream);margin-bottom:6px;letter-spacing:.05em; }
-    .spm-step-desc { font-size:.85rem;line-height:1.7;color:rgba(253,250,241,.55); }
-    .spm-right { }
-    .spm-card { background:linear-gradient(135deg,rgba(89,82,156,.15),rgba(2,39,58,.5));border:1px solid var(--border);border-radius:24px;padding:36px;backdrop-filter:blur(12px);margin-bottom:24px; }
-    .spm-card-title { display:flex;align-items:center;gap:12px;font-family:'Orbitron',monospace;font-weight:700;font-size:.9rem;color:var(--lavender);margin-bottom:14px;letter-spacing:.05em; }
-    .spm-card-title .dot { width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 8px var(--mint); }
-    .spm-card p { font-size:.88rem;line-height:1.75;color:rgba(253,250,241,.6); }
-    .spm-tech-row { display:flex;flex-wrap:wrap;gap:10px;margin-top:16px; }
-    .spm-chip { padding:6px 16px;border-radius:20px;background:rgba(89,82,156,.2);border:1px solid rgba(222,190,239,.2);font-family:'Orbitron',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--lavender);text-transform:uppercase; }
-    .spm-highlight { background:linear-gradient(135deg,rgba(198,222,207,.08),rgba(89,82,156,.15));border:1px solid rgba(198,222,207,.2);border-radius:20px;padding:24px 28px;display:flex;align-items:center;gap:18px; }
-    .spm-highlight-icon { font-size:2rem;flex-shrink:0; }
-    .spm-highlight-text strong { font-family:'Orbitron',monospace;font-size:.82rem;color:var(--mint);display:block;margin-bottom:4px;letter-spacing:.06em; }
-    .spm-highlight-text span { font-size:.83rem;color:rgba(253,250,241,.55); }
 
     /* CTA STRIP */
     .cta-strip { position:relative;z-index:1;background:linear-gradient(135deg,rgba(89,82,156,.35),rgba(2,39,58,.7));border-top:1px solid rgba(198,222,207,.12);border-bottom:1px solid rgba(198,222,207,.12);padding:80px 32px;text-align:center;overflow:hidden; }
@@ -229,7 +197,6 @@
       .skills-grid { grid-template-columns:1fr; }
       .contact-grid { grid-template-columns:1fr; }
       .footer-grid  { grid-template-columns:1fr 1fr; }
-      .spm-grid { grid-template-columns:1fr; }
     }
     @media(max-width:900px) {
       .services-grid { grid-template-columns:repeat(2,1fr); }
@@ -243,8 +210,7 @@
       .nav-logo img { height:46px;width:46px; }
       .nav-brand   { font-size:clamp(.8rem,4.2vw,1.1rem); }
       .section     { padding:72px 16px; }
-      .spm-section { padding:72px 16px; }
-      .hero-slide  { padding:80px 16px; min-height:90vh; }
+      .hero-slide  { padding:80px 16px;min-height:90vh; }
       .services-grid { grid-template-columns:1fr; }
       .form-row    { grid-template-columns:1fr; }
       .footer-grid { grid-template-columns:1fr; }
@@ -278,7 +244,7 @@
   <div class="nebula-orb" style="top:80%;left:75%;width:460px;height:460px;background:#59529C;opacity:.13"></div>
 </div>
 
-<!-- NAVBAR — only Services & Contact -->
+<!-- NAVBAR -->
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">
@@ -287,7 +253,6 @@
     <div class="nav-brand">ORBYTE Technologies</div>
     <div class="desktop-nav">
       <a href="#Services" class="nav-link">Services</a>
-      <a href="#SPM"      class="nav-link">SPM</a>
       <a href="#Contact"  class="nav-link">Contact</a>
     </div>
     <button class="burger-btn" id="burgerBtn" aria-label="Menu">
@@ -295,7 +260,6 @@
     </button>
     <div class="mobile-nav" id="mobileNav">
       <a href="#Services" class="nav-link" onclick="closeMenu()">Services</a>
-      <a href="#SPM"      class="nav-link" onclick="closeMenu()">SPM</a>
       <a href="#Contact"  class="nav-link" onclick="closeMenu()">Contact</a>
     </div>
   </div>
@@ -390,7 +354,6 @@
         <p class="section-lead" style="margin-bottom:20px;">We specialize in delivering high-quality, scalable, and innovative software tailored to meet the evolving needs of modern businesses. Our team combines enthusiasm, continuous learning, and strategic thinking to build solutions that deliver real results.</p>
         <p class="section-lead" style="margin-bottom:32px;">Being a team of passionate freshers, we are highly adaptable, dedicated, and committed to exceeding client expectations through innovation, transparency, and consistent support.</p>
         <a href="#Services" class="btn btn-primary">Discover Our Services</a>
-        <!-- Only 100% Client Satisfaction stat — realistic for a fresh team -->
         <div class="about-stats">
           <div class="stat-box"><span class="stat-num">100%</span><span class="stat-lbl">Client Satisfaction</span></div>
         </div>
@@ -448,12 +411,8 @@
     </div>
     <div class="projects-grid">
       <div class="proj-card">
-        <div class="proj-img">
-          <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhvkXa1zfBTv9X6Qtq371AJSrv_JIVBn2PVRPNQ5E0VCogjvgg25OeQBsKNub1jzd04b5CPZc1JEpDxESLLXzzvstIArolecO_yxuJhNiNQP04klsK4HA1HTl_T6nw4GjpsyvSEY6yI6UqDCNiz1QMge5RgFNh89rLSu0yD73Go9iwSz696-dMrnO2jpG-y" alt="Gem Ventures"/>
-          <div class="proj-img-overlay"></div>
-          <div class="proj-tag-wrap"><span class="proj-tag">Web Development</span></div>
-        </div>
         <div class="proj-body">
+          <span class="proj-tag-inline">Web Development</span>
           <h3 class="proj-title">Gem Ventures</h3>
           <p class="proj-desc">Developed a modern and responsive business website for Gem Ventures, showcasing their services and real estate offerings. Focused on clean UI, smooth navigation, and optimized performance.</p>
           <a href="https://www-gemventures.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:.76rem;padding:12px 28px;">View Live Site ↗</a>
@@ -482,86 +441,6 @@
         <div class="skills-circle">
           <span class="sc-num">100%</span>
           <span class="sc-lbl">Client<br/>Satisfaction</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPM SECTION -->
-<section class="spm-section" id="SPM">
-  <div class="spm-inner">
-    <div class="spm-header">
-      <div class="spm-badge">👉 Introducing SPM</div>
-      <h2 class="section-h2">Simple Mail · Powerful Reach</h2>
-      <div class="divider"></div>
-      <p class="section-lead" style="margin:0 auto;text-align:center;max-width:580px;">SPM — the simplest way to send emails directly from your website using a lightweight backend connected to SMTP or your preferred email API.</p>
-    </div>
-
-    <div class="spm-grid">
-      <!-- Left: How It Works -->
-      <div class="spm-left">
-        <p class="section-eyebrow">How It Works →</p>
-        <h3 class="section-h3" style="margin-bottom:12px;">From Form to Inbox<br/>in 3 Steps</h3>
-        <p class="spm-desc">No third-party services. No complex setup. SPM connects your website's contact form to any SMTP server or email API with a clean, secure backend relay.</p>
-        <div class="spm-flow">
-          <div class="spm-step">
-            <div class="spm-step-num">01</div>
-            <div class="spm-step-body">
-              <p class="spm-step-title">User Submits the Form</p>
-              <p class="spm-step-desc">Visitor fills out the contact form on your website and clicks Send. The frontend collects name, email, and message fields.</p>
-            </div>
-          </div>
-          <div class="spm-step">
-            <div class="spm-step-num">02</div>
-            <div class="spm-step-body">
-              <p class="spm-step-title">Backend Receives & Validates</p>
-              <p class="spm-step-desc">A lightweight Node.js / Python backend receives the POST request, sanitizes inputs, and authenticates the origin before passing to the mailer.</p>
-            </div>
-          </div>
-          <div class="spm-step">
-            <div class="spm-step-num">03</div>
-            <div class="spm-step-body">
-              <p class="spm-step-title">SMTP / API Delivers the Email</p>
-              <p class="spm-step-desc">The backend connects to your SMTP server (Gmail, Zoho, custom) or an email API (SendGrid, Mailgun) and delivers the message straight to your inbox.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Feature Cards -->
-      <div class="spm-right">
-        <div class="spm-card">
-          <div class="spm-card-title"><div class="dot"></div>What is SPM?</div>
-          <p>SPM (Simple Post Mailer) is a minimal backend utility that bridges your website's HTML form with any SMTP service or email API. No heavy frameworks, no paid plugins — just a clean relay that gets messages delivered reliably.</p>
-        </div>
-
-        <div class="spm-card">
-          <div class="spm-card-title"><div class="dot"></div>Compatible Stack</div>
-          <p>Works with any frontend and plugs into popular backends and mail services out of the box.</p>
-          <div class="spm-tech-row">
-            <span class="spm-chip">Node.js</span>
-            <span class="spm-chip">Python</span>
-            <span class="spm-chip">PHP</span>
-            <span class="spm-chip">Gmail SMTP</span>
-            <span class="spm-chip">SendGrid</span>
-            <span class="spm-chip">Mailgun</span>
-            <span class="spm-chip">Zoho Mail</span>
-            <span class="spm-chip">Custom SMTP</span>
-          </div>
-        </div>
-
-        <div class="spm-highlight">
-          <div class="spm-highlight-icon">✉️</div>
-          <div class="spm-highlight-text">
-            <strong>Zero Dependencies on Third-Party Forms</strong>
-            <span>Own your data. Emails go directly from your server to your inbox — no middlemen, no data leaks, fully under your control.</span>
-          </div>
-        </div>
-
-        <div style="margin-top:28px;">
-          <a href="#Contact" class="btn btn-primary" style="margin-right:14px;">Integrate SPM →</a>
-          <a href="#Contact" class="btn btn-outline">Learn More</a>
         </div>
       </div>
     </div>
@@ -629,7 +508,6 @@
       <a href="#About">About Us →</a>
       <a href="#Services">Services →</a>
       <a href="#Projects">Projects →</a>
-      <a href="#SPM">SPM →</a>
       <a href="#Contact">Contact Us →</a>
     </div>
     <div class="footer-col">
@@ -649,7 +527,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 ORBYTE Technologies. All rights reserved. · Fresh ideas meet excellence.</p>
-    <div><a href="#Services">Services</a><a href="#SPM">SPM</a><a href="#Contact">Contact</a></div>
+    <div><a href="#Services">Services</a><a href="#Contact">Contact</a></div>
   </div>
 </footer>
 
@@ -692,7 +570,7 @@
   function closeMenu(){mOpen=false;mNav.classList.remove('open');b1.style.transform='';b2.style.opacity='1';b3.style.transform='';}
 
   /* Active nav */
-  const navSecs=['Services','SPM','Contact'];
+  const navSecs=['Services','Contact'];
   window.addEventListener('scroll',()=>{
     const sy=window.scrollY+90;
     navSecs.forEach(id=>{
