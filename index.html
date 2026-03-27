@@ -786,9 +786,7 @@
       </div>
       <div class="nav-brand">ORBYTE Technologies</div>
       <div class="desktop-nav">
-        <a href="#About"    class="nav-link" onclick="scrollTo('About')">About</a>
         <a href="#Services" class="nav-link" onclick="scrollTo('Services')">Services</a>
-        <a href="#Projects" class="nav-link" onclick="scrollTo('Projects')">Projects</a>
         <a href="#Contact"  class="nav-link" onclick="scrollTo('Contact')">Contact</a>
       </div>
       <button class="burger-btn" id="burgerBtn" aria-label="Menu">
@@ -797,9 +795,7 @@
         <span id="b3"></span>
       </button>
       <div class="mobile-nav" id="mobileNav">
-        <a href="#About"    class="nav-link" onclick="closeMenu()">About</a>
         <a href="#Services" class="nav-link" onclick="closeMenu()">Services</a>
-        <a href="#Projects" class="nav-link" onclick="closeMenu()">Projects</a>
         <a href="#Contact"  class="nav-link" onclick="closeMenu()">Contact</a>
       </div>
     </div>
@@ -1042,7 +1038,7 @@
     }
 
     /* ── Active nav on scroll ── */
-    const sections = ['About', 'Services', 'Projects', 'Contact'];
+    const sections = ['Services', 'Contact'];
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY + 100;
       sections.forEach(id => {
