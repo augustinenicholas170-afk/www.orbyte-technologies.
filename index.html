@@ -92,6 +92,7 @@
     }
 
     .nav-inner {
+      position: relative;
       max-width: 1400px; margin: 0 auto;
       padding: 0 40px;
       display: flex; align-items: center; height: 80px; gap: 0;
@@ -111,7 +112,9 @@
 
     /* Brand name — Orbitron style, NOT in a box */
     .nav-center {
-      flex: 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex; justify-content: center; align-items: center;
     }
     .nav-brand-orbitron {
@@ -160,7 +163,7 @@
     /* Right nav links */
     .nav-links {
       display: flex; align-items: center; gap: 2px;
-      margin-left: 28px; flex-shrink: 0;
+      margin-left: auto; flex-shrink: 0;
     }
     .nav-link {
       font-family: 'JetBrains Mono', monospace; font-size: .63rem;
